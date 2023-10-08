@@ -1,0 +1,101 @@
+[{
+    "id": 1,
+    "bike_name": "Suzuki GSX-R1000",
+    "price": "$15,99",
+    "img": "https://i.ibb.co/QYbXQQT/st1.webp",
+    "model": "2023",
+    "description": "The Suzuki GSX-R1000 is a legendary sportbike known for its power and performance.",
+    "bike_details": {
+      "Engine_Cc": "999 cc",
+      "Max_Power": "199.2 hp",
+      "Tank_Capacity": "16 liters",
+      "Wheelbase": "1,420 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "117 Nm"
+    }
+  },
+  
+  {
+    "id": 2,
+    "bike_name": "Honda CBR600RR",
+    "price": "$11,79",
+    "img": "https://i.ibb.co/1mZ7LRr/st2.webp",
+    "model": "2023",
+    "description": "The Honda CBR600RR is a high-performance supersport motorcycle built for the track and the street.",
+    "bike_details": {
+      "Engine_Cc": "599 cc",
+      "Max_Power": "113 hp",
+      "Tank_Capacity": "18 liters",
+      "Wheelbase": "1,375 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "66 Nm"
+    }
+  },
+  
+  {
+    "id": 3,
+    "bike_name": "Kawasaki Ninja ZX-10R",
+    "price": "$16,39",
+    "img": "https://i.ibb.co/yfF31xp/st3.webp",
+    "model": "2023",
+    "description": "The Kawasaki Ninja ZX-10R is a race-ready superbike designed for speed enthusiasts.",
+    "bike_details": {
+      "Engine_Cc": "998 cc",
+      "Max_Power": "203 hp",
+      "Tank_Capacity": "17 liters",
+      "Wheelbase": "1,440 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "115 Nm"
+    }
+  },
+  
+  {
+    "id": 4,
+    "bike_name": "Yamaha YZF-R6",
+    "price": "$12,19",
+    "img": "https://i.ibb.co/8zJtfRV/st4.webp",
+    "model": "2023",
+    "description": "The Yamaha YZF-R6 is a versatile sportbike known for its agility and style.",
+    "bike_details": {
+      "Engine_Cc": "599 cc",
+      "Max_Power": "116.7 hp",
+      "Tank_Capacity": "17 liters",
+      "Wheelbase": "1,375 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "61.7 Nm"
+    }
+  },
+  
+  {
+    "id": 5,
+    "bike_name": "Ducati Panigale V4",
+    "price": "$22,99",
+    "img": "https://i.ibb.co/QFCsQZp/st5.webp",
+    "model": "2023",
+    "description": "The Ducati Panigale V4 is a high-performance Italian superbike with cutting-edge technology.",
+    "bike_details": {
+      "Engine_Cc": "1,103 cc",
+      "Max_Power": "214 hp",
+      "Tank_Capacity": "16 liters",
+      "Wheelbase": "1,469 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "124 Nm"
+    }
+  },
+  
+  {
+    "id": 6,
+    "bike_name": "BMW S 1000 RR",
+    "price": "$16,99",
+    "img": "https://i.ibb.co/qJn4FvZ/st6.webp",
+    "model": "2023",
+    "description": "The BMW S 1000 RR is a sportbike known for its precision engineering and performance.",
+    "bike_details": {
+      "Engine_Cc": "999 cc",
+      "Max_Power": "205 hp",
+      "Tank_Capacity": "16.5 liters",
+      "Wheelbase": "1,441 mm",
+      "Cooling": "Liquid-cooled",
+      "Max_Torque": "113 Nm"
+    }
+}]
