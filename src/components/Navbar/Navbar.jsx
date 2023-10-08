@@ -32,16 +32,6 @@ const Navbar = () => {
                     </li>
                     <li className="my-2 mb-5 md:mb-0">
                         <NavLink
-                        to="/newbikes"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-                        }
-                        >
-                        <span className="text-black">N</span>ew Bike
-                        </NavLink>
-                    </li>
-                    <li className="my-2 mb-5 md:mb-0">
-                        <NavLink
                         to="/popularbikes"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "

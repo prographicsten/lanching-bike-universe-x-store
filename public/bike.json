@@ -6,12 +6,12 @@
     "model": "2023",
     "description": "The Suzuki GSX-R1000 is a legendary sportbike known for its power and performance.",
     "bike_details": {
-      "Engine_Cc": "999 cc",
-      "Max_Power": "199.2 hp",
-      "Tank_Capacity": "16 liters",
-      "Wheelbase": "1,420 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "117 Nm"
+      "engine_cc": "999 cc",
+      "max_power": "199.2 hp",
+      "tank_capacity": "16 liters",
+      "wheelbase": "1,420 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "117 Nm"
     }
   },
   
@@ -23,12 +23,12 @@
     "model": "2023",
     "description": "The Honda CBR600RR is a high-performance supersport motorcycle built for the track and the street.",
     "bike_details": {
-      "Engine_Cc": "599 cc",
-      "Max_Power": "113 hp",
-      "Tank_Capacity": "18 liters",
-      "Wheelbase": "1,375 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "66 Nm"
+      "engine_cc": "599 cc",
+      "max_power": "113 hp",
+      "tank_capacity": "18 liters",
+      "wheelbase": "1,375 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "66 Nm"
     }
   },
   
@@ -40,12 +40,12 @@
     "model": "2023",
     "description": "The Kawasaki Ninja ZX-10R is a race-ready superbike designed for speed enthusiasts.",
     "bike_details": {
-      "Engine_Cc": "998 cc",
-      "Max_Power": "203 hp",
-      "Tank_Capacity": "17 liters",
-      "Wheelbase": "1,440 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "115 Nm"
+      "engine_cc": "998 cc",
+      "max_power": "203 hp",
+      "tank_capacity": "17 liters",
+      "wheelbase": "1,440 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "115 Nm"
     }
   },
   
@@ -57,12 +57,12 @@
     "model": "2023",
     "description": "The Yamaha YZF-R6 is a versatile sportbike known for its agility and style.",
     "bike_details": {
-      "Engine_Cc": "599 cc",
-      "Max_Power": "116.7 hp",
-      "Tank_Capacity": "17 liters",
-      "Wheelbase": "1,375 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "61.7 Nm"
+      "engine_cc": "599 cc",
+      "max_power": "116.7 hp",
+      "tank_capacity": "17 liters",
+      "wheelbase": "1,375 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "61.7 Nm"
     }
   },
   
@@ -74,12 +74,12 @@
     "model": "2023",
     "description": "The Ducati Panigale V4 is a high-performance Italian superbike with cutting-edge technology.",
     "bike_details": {
-      "Engine_Cc": "1,103 cc",
-      "Max_Power": "214 hp",
-      "Tank_Capacity": "16 liters",
-      "Wheelbase": "1,469 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "124 Nm"
+      "engine_cc": "1,103 cc",
+      "max_power": "214 hp",
+      "tank_capacity": "16 liters",
+      "wheelbase": "1,469 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "124 Nm"
     }
   },
   
@@ -91,11 +91,11 @@
     "model": "2023",
     "description": "The BMW S 1000 RR is a sportbike known for its precision engineering and performance.",
     "bike_details": {
-      "Engine_Cc": "999 cc",
-      "Max_Power": "205 hp",
-      "Tank_Capacity": "16.5 liters",
-      "Wheelbase": "1,441 mm",
-      "Cooling": "Liquid-cooled",
-      "Max_Torque": "113 Nm"
+      "engine_cc": "999 cc",
+      "max_power": "205 hp",
+      "tank_capacity": "16.5 liters",
+      "wheelbase": "1,441 mm",
+      "cooling": "Liquid-cooled",
+      "max_torque": "113 Nm"
     }
 }]

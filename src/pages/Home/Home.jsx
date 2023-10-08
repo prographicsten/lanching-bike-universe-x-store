@@ -1,10 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+
 import Services from "../../components/Services/Services";
 import Shipping from "../../components/Shipping/Shipping";
 
 const Home = () => {
-    const bikes = useLoaderData();
-    // console.log(bikes);
 
     const banner_bg = {
         // backgroundImage: "url('https://i.ibb.co/n1tG6hJ/banner-side.webp')",
@@ -34,10 +32,8 @@ const Home = () => {
                 </div>
             </div>
             <h2 className="text-4xl font-bold text-[#25D366] text-center mb-10">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 lg:gap-6 px-5 md:px-6 lg:px-10 xl:px-20 mb-20">
-            {
-                bikes?.map(bike => <Services key={bike.id} bike={bike}></Services>)
-            }
+            <div>
+            <Services></Services>
             </div>
             <div style={service_bg}>
                 <Shipping></Shipping>

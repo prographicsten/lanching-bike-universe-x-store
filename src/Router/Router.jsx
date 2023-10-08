@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home";
-import NewBike from "../pages/NewBike/NewBike";
 import PopularBike from "../pages/PopularBike/PopularBike";
 import Assesories from "../pages/Assesories/Assesories";
 import About from "../pages/About/About";
@@ -25,16 +24,13 @@ const myCreatedRoute = createBrowserRouter([
           element: <About></About>
         },
         {
-          path: "/newbikes",
-          element: <NewBike></NewBike>
-        },
-        {
           path: "/popularbikes",
           element: <PopularBike></PopularBike>
         },
         {
-          path: "/assesories",
-          element: <Assesories></Assesories>
+        path: "/assesories",
+          element: <Assesories></Assesories>,
+          loader: () => fetch('/assesories.json'),
         },
         {
           path: "/services",

@@ -1,0 +1,50 @@
+[
+    {
+    "id": 1,
+    "img": "https://i.ibb.co/7SHy5zx/lp1.webp",
+    "name": "Aerion Carbon Helmet",
+    "price": "$99.99",
+    "details": "A high-quality helmet designed for safety and comfort during rides."
+    },
+    
+    {
+    "id": 2,
+    "img": "https://i.ibb.co/1MbQ8pr/lp2.webp",
+    "name": "Softy Original Glove",
+    "price": "$19.99",
+    "details": "Durable riding gloves with enhanced grip and protection for your hands."
+    },
+    
+    {
+    "id": 3,
+    "img": "https://i.ibb.co/sgRmwgt/lp3.webp",
+    "name": "Reckles Jacket",
+    "price": "$149.99",
+    "details": "A stylish and protective riding jacket suitable for various weather conditions."
+    },
+    
+    {
+    "id": 4,
+    "img": "https://i.ibb.co/cC7MCcd/lp4.webp",
+    "name": "Flicky Traco Boot",
+    "price": "$79.99",
+    "details": "Comfortable and rugged riding boots designed for long journeys."
+    },
+    
+    {
+    "id": 5,
+    "img": "https://i.ibb.co/ZMvgqfY/lp5.webp",
+    "name": "Reckles Jacket",
+    "price": "$29.99",
+    "details": "A weather-resistant cover to protect your bike from the elements."
+    },
+    
+    {
+    "id": 6,
+    "img": "https://i.ibb.co/c6NyvPP/lp6.webp",
+    "name": "Flicky Traco Boot",
+    "price": "$49.99",
+    "details": "A spacious tank bag with multiple compartments for storing essentials on your rides."
+    }
+      
+]
