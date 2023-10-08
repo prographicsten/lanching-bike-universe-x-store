@@ -6,6 +6,8 @@ import Assesories from "../pages/Assesories/Assesories";
 import About from "../pages/About/About";
 import Services from "../components/Services/Services";
 import Details from "../pages/Details/Details";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import SignupPage from "../pages/SignupPage/SignupPage";
 
 
 const myCreatedRoute = createBrowserRouter([
@@ -25,7 +27,8 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: "/popularbikes",
-          element: <PopularBike></PopularBike>
+          element: <PopularBike></PopularBike>,
+          loader: () => fetch('/bike.json'),
         },
         {
         path: "/assesories",
@@ -41,7 +44,15 @@ const myCreatedRoute = createBrowserRouter([
           path: "/bike/:id",
           element: <Details></Details>,
           loader: () => fetch('/bike.json')
-        }
+        },
+        {
+          path: "/login",
+          element: <LoginPage></LoginPage>
+        },
+        {
+          path: "/signup",
+          element: <SignupPage></SignupPage>
+        },
       ],
     },
 ]);

@@ -1,6 +1,6 @@
 
 const AssesoriesProduct = ({assesoriesProduct}) => {
-    console.log(assesoriesProduct);
+    // console.log(assesoriesProduct);
     const {img, name, price, details} = assesoriesProduct || {};
 
     return (

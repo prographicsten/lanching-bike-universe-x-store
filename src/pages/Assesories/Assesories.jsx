@@ -3,7 +3,7 @@ import AssesoriesProduct from "../../components/AssesoriesProduct/AssesoriesProd
 
 const Assesories = () => {
     const assesories = useLoaderData();
-    console.log(assesories);
+    // console.log(assesories);
 
 
     return (
