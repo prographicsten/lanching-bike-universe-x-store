@@ -6,7 +6,7 @@ const Service = ({bike}) => {
 
     return (
         <div>
-            <div className="text-center py-10 bg-[#F9F9F9] rounded-tl-lg hover:rounded-tl-[50px] rounded-br-2xl mb-5 md:mb-0">
+            <div className="text-center py-10 bg-[#F9F9F9] rounded-tl-lg hover:rounded-tl-[50px] rounded-br-2xl mb-5 md:mb-0" data-aos="fade-up">
                 <img className="mx-auto" src={img} alt="" />
                 <h2 className="text-lg text-[#111111] font-bold mt-5">{bike_name}</h2>
                 <div className="flex justify-around my-5">

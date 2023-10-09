@@ -8,13 +8,14 @@ import Services from "../components/Services/Services";
 import Details from "../pages/Details/Details";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignupPage from "../pages/SignupPage/SignupPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const myCreatedRoute = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-      errorElement: <p>Page not find</p>,
+      errorElement: <p className="text-center h-[50vh]">Page not find</p>,
       children: [
         {
           path: "/",
@@ -27,7 +28,7 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
           path: "/popularbikes",
-          element: <PopularBike></PopularBike>,
+          element: <PrivateRoute><PopularBike></PopularBike></PrivateRoute>,
           loader: () => fetch('/bike.json'),
         },
         {

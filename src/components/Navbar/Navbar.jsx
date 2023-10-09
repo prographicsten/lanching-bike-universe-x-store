@@ -1,8 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
-import Login from "./Login";
+// import Login from "./Login";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch();
+    };
+
     const navlinks = <>
 
             <NavLink
@@ -14,14 +25,18 @@ const Navbar = () => {
             <span className="text-black ">H</span>ome
             </NavLink>
 
-            <NavLink
-            to="/about"
-            className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
+            {
+                user && <>
+                <NavLink
+                to="/about"
+                className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
+                }
+                >
+                <span className="text-black ">A</span>bout
+                </NavLink>
+                </>
             }
-            >
-            <span className="text-black ">A</span>bout
-            </NavLink>
 
             <NavLink
             to="/popularbikes"
@@ -62,58 +77,6 @@ const Navbar = () => {
 
 
     return (
-        // <div className="sticky top-0 left-0 w-[100%] bg-yellow-200">
-        //     {/* <nav className="md:flex justify-center md:justify-between text-center md:text-start py-5 px-4 md:px-2 lg:px-10 xl:px-20">
-        //         <div className="flex md:flex-none lg:flex-none xl:flex-none justify-center md:justify-start lg:justify-start xl:justify-start items-center">
-        //         <Logo></Logo>
-        //         </div>
-        //         <ul className="grid grid-cols-2 md:flex items-center md:gap-5 justify-between md:justify-start md:text-start lg:text-start py-4 md:py-0">
-        //             <li className="my-2 mb-5 md:mb-0">
-        //                 <NavLink
-        //                 to="/"
-        //                 className={({ isActive, isPending }) =>
-        //                     isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-        //                 }
-        //                 >
-        //                 <span className="text-black ">H</span>ome
-        //                 </NavLink>
-        //             </li>
-        //             <li className="my-2 mb-5 md:mb-0">
-        //                 <NavLink
-        //                 to="/about"
-        //                 className={({ isActive, isPending }) =>
-        //                     isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-        //                 }
-        //                 >
-        //                 <span className="text-black ">A</span>bout
-        //                 </NavLink>
-        //             </li>
-        //             <li className="my-2 mb-5 md:mb-0">
-        //                 <NavLink
-        //                 to="/popularbikes"
-        //                 className={({ isActive, isPending }) =>
-        //                     isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-        //                 }
-        //                 >
-        //                 <span className="text-black ">P</span>opular Bike
-        //                 </NavLink>
-        //             </li>
-        //             <li className="my-2 mb-5 md:mb-0">
-        //                 <NavLink
-        //                 to="/assesories"
-        //                 className={({ isActive, isPending }) =>
-        //                     isPending ? "pending" : isActive ? "bg-[#FF444A] text-white py-1 px-7 rounded-tl-xl rounded-br-xl   hover:rounded-tl-none hover:rounded-br-none hover:rounded-tr-lg hover:rounded-bl-lg " : " "
-        //                 }
-        //                 >
-        //                 <span className="text-black ">A</span>ssesories
-        //                 </NavLink>
-        //             </li>
-        //         </ul>
-        //         <div className="flex justify-center items-center">
-        //             <Login></Login>
-        //         </div>
-        //     </nav> */}
-        // </div>
 
         <div className="navbar bg-base-100  py-4 px-4 md:px-2 lg:px-10 xl:px-20 flex justify-between">
             <div className="">
@@ -139,7 +102,26 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="">
-                <Login></Login>
+                {
+                    user  ? 
+                    <div className="flex justify-between items-center gap-3">
+                        {
+                            user.displayName ? 
+                            <div className="flex items-center gap-2">
+                                <span className="hidden sm:inline"><small>{user.displayName}</small></span>
+                                <img src={user.photoURL} className="border-box h-6" alt="" />
+                            </div>
+                            :
+                            <span className="hidden sm:inline"><small>{user.email}</small></span>
+                        }
+                        <button onClick={handleSignOut} className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Sign Out</button>
+                    </div>
+                    :
+                    <Link to={'/login'}>
+                        <button className="bg-[#FF444A] text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Login</button>
+                    </Link>
+
+                }
             </div>
         </div>
     );

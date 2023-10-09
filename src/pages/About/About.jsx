@@ -1,15 +1,17 @@
+
 import Shipping from "../../components/Shipping/Shipping";
 
 const About = () => {
+
     return (
         <div className="px-4 md:px-2 lg:px-10 xl:px-20 py-10">
             <div className="about-page">
                 <div className="about-header">
-                <h1 className="text-3xl font-bold">Welcome to Bike Universe X</h1>
+                <h1 className="text-3xl font-bold" data-aos="fade-up">Welcome to Bike Universe X</h1>
                 </div>
                 <div className="about-content mt-4">
-                <h2 className="text-2xl font-semibold">Our Story</h2>
-                <p className="mt-2">
+                <h2 className="text-2xl font-semibold" data-aos="fade-up">Our Story</h2>
+                <p className="mt-2" data-aos="fade-up">
                     Bike Universe X is your one-stop destination for all things related to biking. Founded in [2023], we are passionate about bikes and [briefly explain your mission and values].
 
                     Founder/Team Information:
@@ -46,7 +48,7 @@ const About = () => {
                 </p>
                 </div>
             </div>
-            <div className="bg-green-400 mt-10">
+            <div className="bg-green-400 mt-10" data-aos="fade-up">
             <Shipping></Shipping>
             </div>
         </div>

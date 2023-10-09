@@ -1,6 +1,67 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SignupPage = () => {
+
+    const { createUser, googleLogin } = useContext(AuthContext)
+    // console.log(createUser);
+    const navigate = useNavigate();
+
+    // on submit button handle
+    // const handleRegister = (e) => {
+    //     e.preventDefault();
+
+    //     const form = new FormData(e.currentTarget);
+
+    //     const name = form.get('name');
+    //     const email = form.get('email');
+    //     const password = form.get('password');
+    //     console.log(name, email, password);
+
+    //     // create user
+    //     createUser(email, password)
+    //         .then(result => {
+    //             console.log(result.user);
+    //             navigate('/');
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //         })
+    // };
+    
+    const signup = e => {
+        e.preventDefault();
+
+        console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(name, email, password);
+
+        // create a new user
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    };
+
+    const googleLoginSetup = () =>{
+        googleLogin()
+        .then(result =>{
+          console.log(result.user)
+          navigate('/')
+        })
+        .catch(error=>{
+          console.error(error)
+        })
+    }
+
     return (
         <div className=" min-h-screen bg-base-200">
             <div className="hero-content flex-col">
@@ -8,26 +69,26 @@ const SignupPage = () => {
                 <h1 className="text-5xl font-bold">Signup now!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <form className="card-body">
+                <form onSubmit={signup} className="card-body" data-aos="flip-right">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="text" placeholder="name" className="input input-bordered" required />
+                    <input type="text" placeholder="name" name="name" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="email" placeholder="email" className="input input-bordered" required />
+                    <input type="email" placeholder="email" name="email" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="password" className="input input-bordered" required />
+                    <input type="password" placeholder="password" name="password" className="input input-bordered" required />
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
@@ -42,7 +103,7 @@ const SignupPage = () => {
                     <div>
                         <h2 className="text-2xl font-semibold text-center">Signup with</h2>
                         <div className="flex justify-between items-center mt-5">
-                            <button className="flex items-center font-medium bg-[#FF444A] text-white py-2 hover:bg-black hover:text-white px-8 rounded-full"><i className='mr-2 bx bxl-google' ></i><span className="text-red-500">G</span>oogle</button>
+                            <button onClick={googleLoginSetup} className="flex items-center font-medium bg-[#FF444A] text-white py-2 hover:bg-black hover:text-white px-8 rounded-full"><i className='mr-2 bx bxl-google' ></i><span className="text-red-500">G</span>oogle</button>
                             <button className="flex items-center font-medium bg-[#FF444A] text-white py-2 hover:bg-black hover:text-white px-8 rounded-full"><i className='mr-2 bx bxl-github' ></i><span className="text-red-500">G</span>ithub</button>
                         </div>
                     </div>

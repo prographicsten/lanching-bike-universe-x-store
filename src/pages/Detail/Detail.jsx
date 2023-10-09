@@ -1,6 +1,24 @@
+import { useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const Detail = ({details}) => {
-    console.log(details);
+
+    const {user} = useContext(AuthContext)
+    const navigate = useNavigate();
+
+    const orderNow = () => {
+        if(user === true) {
+            toast('Your order successfully');
+        }else {
+            toast('Please login first');
+            navigate('/login');
+        }
+    }
+
+    // console.log(details);
     const {img, bike_details, bike_name, price} = details || {};
 
 
@@ -17,9 +35,10 @@ const Detail = ({details}) => {
                     <p>Wheelbase: {bike_details?.wheelbase}</p>
                     <p>Cooling: {bike_details?.cooling}</p>
                     <p>Max Torque: {bike_details?.max_torque}</p>
-                    <button className="bg-[#FF444A] mt-5 text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Order Now</button>
+                    <button onClick={orderNow} className="bg-[#FF444A] mt-5 text-white py-1 font-semibold hover:bg-black hover:text-white px-8 rounded-full">Order Now</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

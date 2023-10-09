@@ -9,7 +9,7 @@ const Details = () => {
     // console.log(details);
 
     const {id} = useParams();
-    console.log(id);
+    // console.log(id);
 
     const bikeDetails = useLoaderData();
     // console.log(bikeDetails);
